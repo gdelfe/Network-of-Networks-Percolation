@@ -1,0 +1,81 @@
+strict graph {
+    node[style=filled]
+    node[fillcolor="gold"] 0
+    node[fillcolor="gold"] 1
+    node[fillcolor="gold"] 2
+    node[fillcolor="brown1"] 3
+    node[fillcolor="brown1"] 4
+    node[fillcolor="brown1"] 5
+    node[fillcolor="cyan"] 14
+    node[fillcolor="cyan"] 15
+    node[fillcolor="ghostwhite"] 8
+    node[fillcolor="ghostwhite"] 9
+    node[fillcolor="ghostwhite"] 10
+    node[fillcolor="ghostwhite"] 11
+
+    subgraph cluster_1{
+      style=invis;
+    0 -- 1 [color="red"]
+    0 -- 2 [color="red"]
+    1 -- 0 [color="red"]
+    1 -- 2 [color="red"]
+    }
+
+    1 -- 4 [color="cadetblue"]
+
+    subgraph cluster_1{
+      style=invis;
+    2 -- 0 [color="red"]
+    2 -- 1 [color="red"]
+    }
+
+    2 -- 3 [color="cadetblue"]
+    3 -- 2 [color="cadetblue"]
+
+    subgraph cluster_2{
+      style=invis;
+    3 -- 5 [color="red"]
+    }
+
+    4 -- 1 [color="cadetblue"]
+
+    subgraph cluster_2{
+      style=invis;
+    4 -- 5 [color="red"]
+    5 -- 3 [color="red"]
+    5 -- 4 [color="red"]
+    }
+
+
+    subgraph cluster_3{
+      style=invis;
+    14 -- 15 [color="red"]
+    15 -- 14 [color="red"]
+    }
+
+
+    subgraph cluster_4{
+      style=invis;
+    8 -- 9 [color="red"]
+    8 -- 11 [color="red"]
+    }
+
+    9 -- 2 [color="cadetblue"]
+    2 -- 9 [color="cadetblue"]
+
+    subgraph cluster_4{
+      style=invis;
+    9 -- 8 [color="red"]
+    10 -- 11 [color="red"]
+    }
+
+    11 -- 3 [color="cadetblue"]
+    3 -- 11 [color="cadetblue"]
+
+    subgraph cluster_4{
+      style=invis;
+    11 -- 8 [color="red"]
+    11 -- 10 [color="red"]
+    }
+
+}

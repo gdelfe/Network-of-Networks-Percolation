@@ -1,0 +1,12 @@
+20nodes1.txt
+20nodes2.txt
+20nodes3.txt
+20nodes4.txt
+20nodes5.txt
+20nodes6.txt
+20nodes7.txt
+20nodes8.txt
+20nodes9.txt
+
+
+
